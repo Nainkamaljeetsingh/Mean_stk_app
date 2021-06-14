@@ -1,0 +1,119 @@
+﻿<div [ngClass]="'c2'">
+    <mat-card>Instant appointment with doctors. Guranteed.</mat-card>
+    <input type="text" placeholder="Search for any health keyword" />
+    <button mat-raised-button color="primary">Search &nbsp;&nbsp;&nbsp;<mat-icon>search</mat-icon></button>
+
+    <img src="favicon.ico" alt="Doctor Image"/>
+
+    <div [ngClass]="'trend'">
+      <a routerLink="#" mat-button>Covid19</a>
+      <a routerLink="#" mat-button>Dengue Fever</a>
+      <a routerLink="#" mat-button>Asthama</a>
+      <a routerLink="#" mat-button>Dengue Fever</a>
+      <a routerLink="#" mat-button>Dengue Fever</a>
+      <a routerLink="#" mat-button>Dengue Fever</a>
+    </div>
+ 
+</div>
+  
+<div class="c3">
+  <mat-card>Consult top doctors online for any health concern<br><br><span>Private online consultations with verified doctors in all specialists</span></mat-card>
+  <button mat-stroked-button color="primary">View All</button>
+  <div class="slider">
+    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+          <div class="carousel-cell" *ngFor="let a of arr"><img src={{a}}/></div>
+        </div>
+        </div>
+</div>
+
+<div class="c4">
+  <mat-card>
+    <button></button>
+          Instant appointment with doctors.
+    <br><br>Guranteed.
+  </mat-card>
+</div>
+
+<div class="c5">
+  <mat-card>How it Works<br><br><span>Get the best treatment from the comfor
+    t of your home or office in just 5 simple steps!</span></mat-card>
+  <button mat-stroked-button color="primary">View All</button>
+<div class="slider">
+<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+    <div class="carousel-cell" *ngFor="let a of arr1"><img src="{{a}}"/></div>
+  </div>
+  </div>
+</div>
+
+<div class="c5 c5a">
+    <mat-card>Find Doctors Near You<br><br><span>Private online consultations with verified doctors in all specialists</span></mat-card>
+    <button mat-stroked-button color="primary">View All</button>
+    
+<div class="slider">
+<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+      <div class="carousel-cell" *ngFor="let a of arr1"></div>
+    </div>
+    </div>
+  </div>
+
+  <div class="c7">
+    <mat-card>Your Appointment<br><br><span>Please Check Your Appointments From here</span></mat-card>
+    <button mat-stroked-button color="primary">View All</button>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
+    
+
+  </div>
+
+  <div class="c5 c5a c5b">
+    <mat-card>Consult top doctors online for any health concern<br><br><span>Private online consultations with verified doctors in all specialists</span></mat-card>
+    <button mat-stroked-button color="primary">View All</button>
+<div class="slider">
+<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+      <div class="carousel-cell" *ngFor="let a of arr1"></div>
+    </div>
+    </div>
+  </div>
+  
+  
+
+  <div class="c8">
+    <mat-card>
+      Eating right for strong immunity
+      <br><br>12 Coronavirus Myths and Facts That You Should Be<br><br> Aware Of
+      <br><br>Dr. Diana Borgio
+      <button mat-flat-button color="primary">Read Now</button>
+    </mat-card>
+  </div>

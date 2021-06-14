@@ -1,0 +1,58 @@
+<div class="doctor">
+    <div class="row">
+        <div class="col"><input type="text" placeholder="Search for any doctor" /></div>
+    </div>
+    <div class="row">
+        <div class="col"><h2>Search Doctors by Specialities</h2>
+        </div>
+        <div class="col" style="position:relative;left:590px;"><mat-icon>sort</mat-icon></div>
+    </div>
+    <div class="row" *ngFor="let item of [1,2]">
+        <div class="col" *ngFor="let item of [1,2,3,4]">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Dr Karen D</mat-card-title>
+          <mat-card-subtitle>MBBS,MD-General Medicine</mat-card-subtitle>
+          <mat-card-title-group>8yr</mat-card-title-group>
+          <mat-card-subtitle class="lang">
+              English,Hindi
+          </mat-card-subtitle>
+          <mat-card-subtitle class="rating">
+            <mat-icon style="color: rgb(243, 183, 72);" *ngFor="let item of [1,2,3,4,5]">star</mat-icon>
+        </mat-card-subtitle>
+        </mat-card-header>
+        <hr>
+        <mat-card-content>
+            <a href="/users" mat-button color="primary" ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="24" height="24"
+                viewBox="0 0 172 172"
+                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#7d99d0"><path d="M57.33333,14.33333v14.33333h-7.16667l-50.16667,16.34896v105.48438h172v-121.83333h-57.33333v-14.33333zM7.16667,21.5v14.33333l28.66667,-9.63021v-4.70312zM86,43c23.73958,0 43,19.26042 43,43c0,23.73958 -19.26042,43 -43,43c-23.73958,0 -43,-19.26042 -43,-43c0,-23.73958 19.26042,-43 43,-43zM86,57.33333c-15.84505,0 -28.66667,12.82162 -28.66667,28.66667c0,15.84506 12.82162,28.66667 28.66667,28.66667c15.84506,0 28.66667,-12.82161 28.66667,-28.66667c0,-15.84505 -12.82161,-28.66667 -28.66667,-28.66667z"></path></g></g></svg><span>&#8377;</span> 600 Video Consultation Fee</a>
+            <a href="/users" mat-button color="primary" ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="26" height="26"
+                viewBox="0 0 172 172"
+                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#5c7ab2"><path d="M79.59135,13.64423c-2.11899,0.02584 -4.47055,0.95613 -6.61538,3.10096l-43.62019,42.79327h-22.74038c-3.64363,0 -6.61538,2.97176 -6.61538,6.61538v39.69231c0,3.64363 2.97176,6.61538 6.61538,6.61538h22.74038l43.41346,42.58654c6.61538,6.61538 13.23077,3.23017 13.23077,-5.78846v-127.55288c0,-5.24579 -2.86839,-8.08834 -6.40865,-8.0625zM127.55288,20.25962c-2.89423,0.49099 -5.11658,2.84255 -5.45253,5.76262c-0.3101,2.92007 1.29207,5.71094 4.00541,6.84796c19.43269,9.79387 32.66346,29.82092 32.66346,53.12981c0,23.3089 -13.23077,43.33594 -32.66346,53.12981c-2.42908,0.82692 -4.13462,2.9976 -4.41887,5.53005c-0.28425,2.55829 0.93029,5.03906 3.12681,6.38281c2.17067,1.31791 4.93569,1.26623 7.08053,-0.12921c23.7482,-11.99038 40.10577,-36.53966 40.10577,-64.91346c0,-28.37379 -16.35757,-52.92308 -40.10577,-64.91346c-1.13702,-0.64603 -2.42908,-0.93029 -3.72115,-0.82692c-0.20673,0 -0.41346,0 -0.62019,0zM113.28846,38.45192c-2.94591,0.36178 -5.29747,2.66166 -5.71094,5.60757c-0.4393,2.92008 1.13702,5.78846 3.85036,7.00301c12.42969,6.71875 20.87981,19.76863 20.87981,34.9375c0,15.11719 -8.32091,28.21875 -20.67308,34.9375c-2.3774,0.93029 -4.03125,3.1268 -4.21214,5.6851c-0.18088,2.55829 1.11118,4.98738 3.33354,6.25361c2.24819,1.24038 4.98738,1.11117 7.08053,-0.36178c16.51262,-8.96695 27.70192,-26.46154 27.70192,-46.51442c0,-20.10456 -11.31851,-37.57331 -27.90865,-46.51442c-0.93029,-0.59435 -1.98978,-0.95613 -3.10096,-1.03365c-0.41346,-0.05168 -0.82692,-0.05168 -1.24038,0zM96.12981,60.15865c-3.15264,0.51683 -5.50421,3.23017 -5.55589,6.43449c-0.05168,3.20433 2.19652,5.96935 5.34916,6.58954c5.65926,1.47296 9.92308,6.61538 9.92308,12.81731c0,6.20192 -4.26382,11.34435 -9.92308,12.81731c-3.54026,0.90445 -5.65926,4.52224 -4.75481,8.0625c0.90445,3.54026 4.52224,5.65926 8.0625,4.75481c11.39603,-2.97176 19.84615,-13.38581 19.84615,-25.63462c0,-12.24879 -8.45012,-22.66286 -19.84615,-25.63462c-0.80108,-0.23257 -1.65385,-0.28426 -2.48077,-0.20673c-0.20673,0 -0.41346,0 -0.62019,0z"></path></g></g></svg><span>&#8377;</span> 400 Audio Consultation Fee</a>
+            
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">Book Now</button>
+          </mat-card-actions>
+        
+      </mat-card>
+      </div>
+      </div>
+      <div class="row">
+          <div class="col but">
+            <button mat-stroked-button color="primary">View More</button>
+          </div>
+      </div>
+
+</div>
+<div class="c8">
+    <mat-card>
+      Eating right for strong immunity
+      <br><br>12 Coronavirus Myths and Facts That You Should Be<br><br> Aware Of
+      <br><br>Dr. Diana Borgio
+      <button mat-flat-button color="primary">Read Now</button>
+    </mat-card>
+  </div>

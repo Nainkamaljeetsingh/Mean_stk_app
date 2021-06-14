@@ -1,0 +1,127 @@
+<form [formGroup]="form1"(ngSubmit)="onSubmit()">
+    <div class="form-row">
+               <input #imageInput
+               type="file"
+               accept="image/*" style="width: 100%;border-radius: 5px; padding-top: 2px;" >
+
+    
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+        <label for="firstName">First Name</label>
+        <input type="text" placeholder="Enter here" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group col">
+        <label for="lastName">Last Name</label>
+        <input type="text" placeholder="Enter here" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="form-row">
+    <div class="form-group col">
+        <label for="phone">Mobile no.</label>
+        <input type="tel" placeholder="Enter here" formControlName="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+        <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+            <div *ngIf="f.phone.errors.required">Mobile no. is required</div>
+        </div>
+    </div>
+    <div class="form-group col">
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter here" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+        </div>
+    </div>
+    </div>
+    <div class="form-row">
+
+        <div class="form-group col">
+            <label for="doctorName">Doctor Fullname</label>
+            <input placeholder="Enter here" type="text" formControlName="doctorname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+            <div *ngIf="submitted && f.doctorname.errors" class="invalid-feedback">
+                <div *ngIf="f.doctorname.errors.required">Doctor Fullname is required</div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <label for="password">Password</label>
+            <input placeholder="Enter here" type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+        </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+            <label for="dob">Date of Birth</label>
+            <input type="date" placeholder="Enter here" formControlName="dob" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+                <div *ngIf="f.dob.errors.required">DOB is required</div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <label for="qualification">Qualification</label>
+            <input type="text" placeholder="Enter here" formControlName="qualification" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+            <div *ngIf="submitted && f.qualification.errors" class="invalid-feedback">
+                <div *ngIf="f.qualification.errors.required">Qualification is required</div>
+            </div>
+        </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+            <label for="gender">Genders</label>
+            <input type="text" placeholder="Enter here" list="genders" name="browser" id="browser" formControlName="gender" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <datalist id="genders">
+                <option value="Male">
+                <option value="Female">
+                <option value="Others">
+              </datalist>
+            <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+                <div *ngIf="f.gender.errors.required">Genders is required</div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <label for="lang">Prefered Language</label>
+            <input type="text" placeholder="Enter here" list="lang" name="browser" id="browser" formControlName="lang" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+            <datalist id="lang">
+                <option value="Hindi">
+                <option value="English">
+                <option value="Kannada">
+              </datalist>
+            <div *ngIf="submitted && f.lang.errors" class="invalid-feedback">
+                <div *ngIf="f.lang.errors.required">Prefered Language is required</div>
+            </div>
+        </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-group col">
+        <label for="specialisation">Select Specialisation</label>
+        <input type="text" placeholder="Enter here" list="browsers" name="browser" placeholder="Enter here" formControlName="specialisation" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <datalist id="browsers">
+            <option *ngFor="let item of [1,2,3,4,5]" value="Specialst in kidney">
+          </datalist>
+
+        <div *ngIf="submitted && f.specialisation.errors" class="invalid-feedback">
+            <div *ngIf="f.specialisation.errors.required">Specialisation is required</div>
+        </div>  
+    </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col"></div>
+    <div class="form-group col">
+        <button [disabled]="loading" class="btn btn-primary" style="position:relative;margin-left:420px;">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Register
+        </button>
+        <a routerLink="../login" class="btn btn-link">Signin</a>
+    </div>
+    </div>
+</form>
+
